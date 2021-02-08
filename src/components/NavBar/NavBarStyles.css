@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo', sans-serif;
+}
+
+h1{
+    float: left;
+}
+
+.head{
+    width: 100%;
+    height: 75px;
+    background: rgb(241, 241, 241);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.container{
+    width: 98%;
+    margin: auto;
+    display: table;
+}
+/*Estilo del buscador*/
+.search{
+    position: absolute;
+    justify-content: center;
+    margin-top: 13px;
+    margin-left:20%;
+    background: #9DD8CA;
+    padding:4px;
+    border-radius: 40px;
+}
+.search-text{
+    border:none;
+    background:none;
+    outline: none;
+    color:black;
+    transform: translateX(5%);
+}
+#button-search{
+    float: right;
+    text-decoration: none;
+    color: black;
+}
+/*Estilos del menu*/
+#menu-bar{
+    display: none;
+}
+
+label{
+    float: right;
+    font-size: 28px;
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.menu{
+    position:absolute;
+    top: 59px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(241, 241, 241,0.9);
+    transition: all 0.5s;
+    transform: translateX(-100%);
+}
+
+.menu a{
+    display: block;
+    color:black;
+    height: 50px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.menu a:hover{
+    background: rgba(160, 254, 255,0.5);
+}
+
+#menu-bar:checked ~ .menu{
+    transform: translateX(0%);
+}
+/*Lista inferior*/
+.subnav{
+    position: absolute;
+    width: 98%;
+    margin: auto;
+    margin-left:28%;
+    display: table;
+    font-size:13px;
+}
+.subnav a{
+    margin-right:10px;
+}
+
+/*Estilos para escritorio*/
+@media (min-width: 1024px){
+    .menu{
+        position:static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+    }
+    .menu a{
+        border:none;
+    }
+    label{
+        display: none;
+    }
+    .container {
+        width: 1140px;
+    }
+    .search{
+        width: 30%;
+    }
+    .search-text{
+        width: 85%;
+    }
+    #icon-s{
+        float: right;
+    }
+}
+
+@media(max-width:800px){
+    #text-title{
+        display: none;
+    }
+}

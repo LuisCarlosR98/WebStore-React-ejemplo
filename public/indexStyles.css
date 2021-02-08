@@ -1,0 +1,9 @@
+body{
+    background-color: rgba(218, 255, 248);
+}
+
+@media(min-width:1024px){
+    .container {
+        width: 1000px;
+    }
+}
